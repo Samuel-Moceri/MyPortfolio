@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { lazy, Suspense } from "react";
 import { lightTheme, mediaQueries } from "./Themes";
 
-import { Design, Develope } from "./AllSvgs";
+import { Develope } from "./AllSvgs";
 import Loading from "../SubComponents/Loading";
 
 //Components

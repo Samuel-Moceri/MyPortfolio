@@ -43,7 +43,7 @@ return (
     <motion.div
     initial={{transform:"scale(0)"}}
     animate={{scale:[0,1,1.5,1]}}
-    transition={{type:'spring', duration:1, delay:1.4}}
+    transition={{type:'spring', duration:1, delay:1.1}}
     >
         <NavLink style={{color:'inherit'}} target="_blank" rel="noopener noreferrer" to={{pathname:"https://youtu.be/X7Indy4FB_o?t=2426"}}>
             <YouTube width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body } />
