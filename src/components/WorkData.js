@@ -27,7 +27,15 @@ export const Work = [
         demo:"https://github.com/Samuel-Moceri/New_Chatroom",
         github:"https://github.com/Samuel-Moceri/New_Chatroom"
     },
-    
+    {
+        id:4,
+        name:"Portfolio",
+        description:"Lien vers le repo de ce portfolio professionel",
+        tags:["React","SCSS","HTML"],
+        
+        demo:"https://github.com/Samuel-Moceri/MyPortfolio",
+        github:"https://github.com/Samuel-Moceri/MyPortfolio"
+    },
     
   
 ] 
