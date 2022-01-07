@@ -28,6 +28,7 @@ background-color: ${props => props.color === 'dark' ? darkTheme.text : darkTheme
 `
 
 const SocialIcons = (props) => {
+
 return (
   <Icons>
     <motion.div

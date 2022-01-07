@@ -113,7 +113,7 @@ const AboutPage = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}
                     >
-                        Je suis un web développeur front-end habitant quelque part en France. Je suis nouveau dans ce nouveau monde mais prêt à créer des sites interatifs et avec des styles selon vos besoins.
+                        Je suis un web développeur front-end habitant quelque part en France. Je suis nouveau dans ce nouveau monde mais prêt à créer des sites interactifs et avec des styles selon vos besoins.
                         <br /> <br/>
                         Je suis très curieux et j'aime découvrir de nouveaux univers, vos univers ! 
                         <br /> <br/>

@@ -34,8 +34,8 @@ const Main = styled.form`
     border: 2px solid ${props => props.theme.text};
     color: ${props => props.theme.text};
     padding: 2rem;
-    width: 50vw;
-    height: 50vh;
+    width: 100vw;
+    height: 100vh;
     z-index: 3;
     line-height: 1.5;
 
@@ -62,9 +62,9 @@ const Main = styled.form`
 
     ${mediaQueries(30)`
         width: 50vw;
-        height: auto;
+        height: 40vh;
         backdrop-filter: none;
-        margin-top:2rem;
+        margin-top:1rem;
     `};
 
     ${mediaQueries(20)`
@@ -80,12 +80,32 @@ const DivBox = styled.form`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 400px;
+    width: 100vw;
+    height: 100vh;
     padding: 40px;
     ${'' /* background: #fff; */}
     ${'' /* border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); */}
+
+    ${mediaQueries(40)`
+        width: 60vw;
+        height: 50vh;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    `};
+
+    ${mediaQueries(30)`
+        width: 50vw;
+        height: 57vh;
+        backdrop-filter: none;
+        margin-top:2rem;
+    `};
+
+    ${mediaQueries(10)`
+        padding: 1rem;
+        font-size: calc(0.5rem + 1vw);
+    `};
 `
 
 const EmailArea = styled.input.attrs({ 
@@ -105,7 +125,7 @@ const Input = styled.input.attrs({
     type: 'submit',
     value: 'Envoyer',
   })`
-    background: #00aec9;
+    background: #5584AC;
     color: #fff;
     cursor: pointer;
     margin-bottom: 0;
@@ -134,11 +154,11 @@ const ContactPage = () => {
                 <HomeButton />
                 <Main>
                     <DivBox action="https://formsubmit.co/moceri.samuel@gmail.com" method="POST" >
-                        <h2>Contactez moi</h2>
+                        <h3>Contactez moi</h3>
                         <div className="form-label-group">
                             <label htmlFor="inputEmail">Adresse mail</label>
                             <br/>
-                            <EmailArea type="email" id="inputEmail" placeholder="votre adresse mail..." />
+                            <EmailArea type="email" id="inputEmail" placeholder="votre adresse mail..." required />
                         </div>
 
                         <div className="form-label-group">
@@ -147,7 +167,8 @@ const ContactPage = () => {
                             <br/>
                             <TextArea name="text" placeholder="Ecrivez votre message..." required />
                         </div>
-                    <Input  />
+
+                        <Input />
                     </DivBox>
                 </Main>
             </Box>

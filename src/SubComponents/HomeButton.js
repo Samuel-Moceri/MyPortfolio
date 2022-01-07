@@ -21,8 +21,9 @@ width: 2.5rem;
 height: 2.5rem;
 
 display: flex;
+flex-direction: column;
 padding-bottom: 2px;
-justify-content: center;
+${'' /* justify-content: center; */}
 align-items: center;
 z-index: 3;
 
@@ -39,12 +40,21 @@ cursor: pointer;
 }
 `
 
+const HomeText = styled.span`
+color: ${(props) => props.theme.text};
+position: fixed;
+top: 2.25rem;
+left: 50%;
+transform: translate(-50%,0);
+`
+
 const HomeButton = () => {
     return (
         <Home>
             <NavLink to="/">
-                <HomeBtn width={30} height={30} fill='currentColor' />
+                <HomeBtn width={30} height={30} fill='currentColor' /> 
             </NavLink>
+            <HomeText>Accueil</HomeText>
         </Home>
     )
 }

@@ -20,7 +20,7 @@ const Box = styled(motion.div)`
   background-color: ${(props) => props.theme.body};
   position: relative;
   display: flex;
-  height: 400vh;
+  height: 200vh;
 `;
 
 const Main = styled(motion.ul)`
