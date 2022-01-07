@@ -34,8 +34,8 @@ const Main = styled.form`
     border: 2px solid ${props => props.theme.text};
     color: ${props => props.theme.text};
     padding: 2rem;
-    width: 100vw;
-    height: 100vh;
+    width: 50vw;
+    height: 60vh;
     z-index: 3;
     line-height: 1.5;
 
@@ -80,8 +80,8 @@ const DivBox = styled.form`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 100vh;
+    width: 50vw;
+    height: 45vh;
     padding: 40px;
     ${'' /* background: #fff; */}
     ${'' /* border: 1px solid rgba(0, 0, 0, 0.1);
