@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 
 import music from "../assets/audio/Better.mp3"
+import { mediaQueries } from '../components/Themes'
 
 const Box = styled.div`
 display:flex;
@@ -25,6 +26,19 @@ z-index:10;
 &>*:nth-child(5){
     animation-delay: 0.8s;
 }
+
+    ${mediaQueries(30)`
+        top: 13%;
+        left: 15%;
+        ${'' /* backdrop-filter: none; */}
+        margin-top:1rem;
+    `};
+    ${mediaQueries(20)`
+        top: 17%;
+        left: 15%;
+        ${'' /* backdrop-filter: none; */}
+        margin-top:1rem;
+    `};
 `
 
 const play = keyframes`

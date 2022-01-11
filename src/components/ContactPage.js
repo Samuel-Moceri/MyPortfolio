@@ -30,12 +30,12 @@ const Box = styled.div`
     font-style: italic;
 `
 
-const Main = styled.form`
+const Main = styled.div`
     border: 2px solid ${props => props.theme.text};
     color: ${props => props.theme.text};
     padding: 2rem;
     width: 50vw;
-    height: 60vh;
+    height: 50%;
     z-index: 3;
     line-height: 1.5;
 
@@ -54,20 +54,24 @@ const Main = styled.form`
 
     ${mediaQueries(40)`
         width: 60vw;
-        height: 50vh;
-        top:50%;
-        left:50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
         transform:translate(-50%,-50%);
     `};
 
     ${mediaQueries(30)`
-        width: 50vw;
-        height: 40vh;
-        backdrop-filter: none;
+        top: 55%;
+        width: 45vw;
+        height: 55vh;
+        ${'' /* backdrop-filter: none; */}
         margin-top:1rem;
     `};
 
     ${mediaQueries(20)`
+        top: 65%;
+        width: 45vw;
+        height: 62vh;
         padding: 1rem;
         font-size: calc(0.5rem + 1vw);
     `};
@@ -81,7 +85,7 @@ const DivBox = styled.form`
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50vw;
-    height: 45vh;
+    height: center;
     padding: 40px;
     ${'' /* background: #fff; */}
     ${'' /* border: 1px solid rgba(0, 0, 0, 0.1);
@@ -90,19 +94,21 @@ const DivBox = styled.form`
     ${mediaQueries(40)`
         width: 60vw;
         height: 50vh;
-        top:50%;
-        left:50%;
+        top: 50%;
+        left: 50%;
         transform:translate(-50%,-50%);
     `};
 
     ${mediaQueries(30)`
+        top: 50%;
         width: 50vw;
-        height: 57vh;
-        backdrop-filter: none;
+        height: 55vh;
+        ${'' /* backdrop-filter: none; */}
         margin-top:2rem;
     `};
 
-    ${mediaQueries(10)`
+    ${mediaQueries(20)`
+        top: 40%;
         padding: 1rem;
         font-size: calc(0.5rem + 1vw);
     `};
@@ -112,13 +118,21 @@ const EmailArea = styled.input.attrs({
     type: 'email',
 })`
   width: 100%;
+
+`
+
+const NameArea = styled.input.attrs({ 
+    type: 'name',
+})`
+  width: 100%;
 `
 
 const TextArea = styled.textarea.attrs({ 
     type: 'text',
 })`
   width: 100%;
-  height: 12rem;
+  height: 10rem;
+  resize: none;
 `
 
 const Input = styled.input.attrs({ 
@@ -151,24 +165,25 @@ const ContactPage = () => {
                 <LogoComponent theme='light' />
                 <SocialIcons theme='light' />
                 <HomeButton theme='light' />
-                <HomeButton />
+                {/* <HomeButton /> */}
                 <Main>
                     <DivBox action="https://formsubmit.co/moceri.samuel@gmail.com" method="POST" >
                         <h3>Contactez moi</h3>
                         <div className="form-label-group">
                             <label htmlFor="inputEmail">Adresse mail</label>
                             <br/>
-                            <EmailArea type="email" id="inputEmail" placeholder="votre adresse mail..." required />
-                        </div>
-
-                        <div className="form-label-group">
-                            <label htmlFor="inputText">Votre Message</label>
-                            <label htmlFor="inputText"></label>
+                            <EmailArea type="email" name="email" id="inputEmail" placeholder="Saisissez adresse mail..." aria-label="Votre email" required />
+                        
+                            <label htmlFor="inputName">Nom et Prénom</label>
                             <br/>
-                            <TextArea name="text" placeholder="Ecrivez votre message..." required />
+                            <NameArea type="text" name="name" id="inputName" placeholder="Saisissez votre nom et prénom..." aria-label="Votre Nom et Prénom" required />
+                        
+                            <label htmlFor="inputText">Votre Message</label>
+                            <br/>
+                            <TextArea type="text"  name="text" id="inputText" placeholder="Saisissez votre message..." aria-label="Votre message" required />
                         </div>
 
-                        <Input />
+                        <Input aria-label="Envoyer" />
                     </DivBox>
                 </Main>
             </Box>
