@@ -12,6 +12,7 @@ import Loading from "../SubComponents/Loading";
 
 const SocialIcons = lazy(() => import("../SubComponents/SocialIcons"));
 const HomeButton = lazy(() => import("../SubComponents/HomeButton"));
+const ScrollText = lazy(() => import("../SubComponents/ScrollText"));
 const LogoComponent = lazy(() => import("../SubComponents/LogoComponent"));
 const BigTitle = lazy(() => import("../SubComponents/BigTitle"));
 
@@ -150,10 +151,12 @@ const WorkPage = () => {
                       }
                   </Main>
 
-              <BigTitle text="PROJETS" top='10%' right="20%"/>
-                  
+              <BigTitle text="PROJETS" top='10%' right="1%"/>
+
+              <ScrollText/>
+
               <Rotate ref={logo}>
-                  <Logo width={80} height={80} fill={darkTheme.text} />
+                <Logo width={80} height={80} fill={darkTheme.text} />
               </Rotate>
             </Box>
           </Suspense>
