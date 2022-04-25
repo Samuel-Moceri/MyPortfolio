@@ -36,6 +36,14 @@ export const Work = [
         demo:"https://github.com/Samuel-Moceri/MyPortfolio",
         github:"https://github.com/Samuel-Moceri/MyPortfolio"
     },
+    {
+        id:5,
+        name:"Shop and Groove",
+        description:"Un site Ecommerce qui vous permet d'acheter différents articles et de gerer votre panier",
+        tags:["React","SCSS","HTML","CSS"],
+        
+        demo:"sc1qjgt9943.universe.wf",
+        github:"https://github.com/Samuel-Moceri/BarneysProject"
+    },
     
-  
 ] 
